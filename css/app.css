@@ -44,21 +44,7 @@ ul, ol, menu {
     background-color: #282828;
     color: #ffffff;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-.toolbar .tools-left, 
-.toolbar .tools-right {
-    flex-basis: 230px;
-    border: 1px solid red;
-}
-
-.toolbar .tools-middle {
-    flex-basis: 60%;
-    flex-grow: 1;
-    justify-content: center;
-    border: 1px solid goldenrod;
 }
 
 .toolbar .tools {
@@ -68,12 +54,49 @@ ul, ol, menu {
     padding: 0 0.75rem;
 }
 
+.toolbar .tools-left, 
+.toolbar .tools-right {
+    flex-basis: 230px;
+    border: 1px solid red;
+}
+
+.tools-left .tool-item:first-child {
+    margin-right: auto;
+}
+
+.toolbar .tools-middle {
+    flex-basis: 60%;
+    flex-grow: 1;
+    justify-content: center;
+    border: 1px solid goldenrod;
+}
+
+.toolbar .tool-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
 .toolbar img {
     width: 42px;
     height: 42px;
 }
 
-.toolbar .tool-item {
-    display: flex;
-    gap: 0.75rem;
+.toolbar .band-name,
+.toolbar .song-name {
+    font-weight: 700;
+}
+
+.toolbar .band-name {
+    font-size: .75rem;
+    color: #ffffff;
+}
+
+.toolbar .song-name {
+    font-size: .625rem;
+    text-transform: uppercase;
+}
+
+.toolbar .tools-left {
+    color: #D2D2D2;
 }
