@@ -10,6 +10,15 @@ body {
     flex-direction: column;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul, ol, menu {
+    list-style: none;
+}
+
 .content-wrapper {
     flex-grow: 1;
     background-color: #141922;
@@ -25,7 +34,28 @@ body {
     flex-grow: 1;
 }
 
+/* TOOLBAR */
 .toolbar {
     min-height: 90px;
     background-color: #282828;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toolbar .tools {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.toolbar img {
+    width: 42px;
+    height: 42px;
+}
+
+.toolbar .tool-item {
+    display: flex;
+    gap: 1rem;
 }
