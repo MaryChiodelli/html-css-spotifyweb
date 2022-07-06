@@ -47,6 +47,30 @@ ul, ol, menu {
     align-items: center;
 }
 
+.toolbar .tools-left, 
+.toolbar .tools-right {
+    flex-basis: 230px;
+    border: 1px solid red;
+}
+
+.toolbar .tools-middle {
+    flex-basis: 60%;
+    flex-grow: 1;
+    border: 1px solid goldenrod;
+}
+
+.tools-middle .bar {
+    height: 4px;
+    width: 30%;
+    background-color: #ffffff;
+}
+
+.tools-right .bar {
+    height: 4px;
+    width: 100px;
+    background-color: #ffffff;
+}
+
 .toolbar .tools {
     display: flex;
     align-items: center;
@@ -54,21 +78,12 @@ ul, ol, menu {
     padding: 0 0.75rem;
 }
 
-.toolbar .tools-left, 
-.toolbar .tools-right {
-    flex-basis: 230px;
-    border: 1px solid red;
+.toolbar .tools-middle .tools {
+    justify-content: center;
 }
 
 .tools-left .tool-item:first-child {
     margin-right: auto;
-}
-
-.toolbar .tools-middle {
-    flex-basis: 60%;
-    flex-grow: 1;
-    justify-content: center;
-    border: 1px solid goldenrod;
 }
 
 .toolbar .tool-item {
@@ -99,4 +114,8 @@ ul, ol, menu {
 
 .toolbar .tools-left {
     color: #D2D2D2;
+}
+
+.toolbar .play {
+    font-size: 1.5rem;
 }
