@@ -147,6 +147,40 @@ button {
     font-size: 20px;
 }
 
+/* user-area */
+.sidebar .user-area {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.sidebar .user-area .download-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D2D2D2;
+    margin-bottom: 15px;
+}
+
+.sidebar .download-icon {
+    width: 12px;
+}
+
+.sidebar .user-area .user-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+}
+
+.sidebar .avatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: contain;
+    background-color: #D2D2D2;
+}
 
 
 
