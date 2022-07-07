@@ -25,18 +25,44 @@ ul, ol, menu {
 
 .content-wrapper {
     flex-grow: 1;
+    overflow: hidden;
     background-color: #141922;
     display: flex;
 }
 
-.main-header {
-    width: 230px;
+.sidebar {
+    flex-basis: 50px;
+    overflow: auto;
     background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-content {
     flex-grow: 1;
+    overflow: auto;
 }
+
+/* SIDEBAR */
+.sidebar > * {
+    border: 1px solid salmon;
+}
+
+.sidebar .playlist {
+    flex-grow: 1;
+}
+
+
+
+@media (min-width: 576px) {
+    .sidebar {
+        flex-basis: 230px;
+    }
+}
+
+
+
 
 /* TOOLBAR */
 .toolbar {
