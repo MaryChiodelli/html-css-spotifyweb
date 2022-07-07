@@ -16,7 +16,7 @@ body {
 
 img {
     max-width: 100%;
-    display: block;
+    /* display: block; */
 }
 
 ul, ol, menu {
@@ -37,6 +37,7 @@ ul, ol, menu {
     color: white;
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
 .main-content {
@@ -47,6 +48,28 @@ ul, ol, menu {
 /* SIDEBAR */
 .sidebar > * {
     border: 1px solid salmon;
+}
+.sidebar > *:not(.sidebar-nav) {
+    padding: 0 20px;
+}
+
+.sidebar .sidebar__logo {
+    padding-top: 20px;
+}
+
+.sidebar .sidebar__logo img {
+    height: 40px;
+}
+
+.sidebar-nav .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 20px;
+}
+
+.sidebar-nav .menu-item img {
+    width: 20px;
 }
 
 .sidebar .playlist {
