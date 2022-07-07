@@ -23,6 +23,12 @@ ul, ol, menu {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: currentColor;
+    display: inline-block;
+}
+
 .content-wrapper {
     flex-grow: 1;
     overflow: hidden;
@@ -34,7 +40,9 @@ ul, ol, menu {
     flex-basis: 50px;
     overflow: auto;
     background-color: #000000;
-    color: white;
+    color: #D2D2D2;
+    font-size: 12px;
+    font-weight: 700;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -55,6 +63,7 @@ ul, ol, menu {
 
 .sidebar .sidebar__logo {
     padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .sidebar .sidebar__logo img {
@@ -62,10 +71,30 @@ ul, ol, menu {
 }
 
 .sidebar-nav .menu-item {
+    position: relative;
+    padding: 0 20px;
+}
+
+.sidebar-nav .menu-item a {
+    line-height: 35px;
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 5px 20px;
+}
+
+.sidebar-nav .menu-item.active {
+    color: white;
+}
+
+.sidebar-nav .menu-item.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 3px;
+    height: 35px;
+    background-color: #ADFF2F;
 }
 
 .sidebar-nav .menu-item img {
