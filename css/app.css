@@ -62,116 +62,53 @@ button {
 /* SIDEBAR */
 .sidebar > * {
     border: 1px solid salmon;
-}
-.sidebar > *:not(.sidebar-nav) {
-    padding: 0 20px;
+    padding: 0 10px;
+    text-align: center;
 }
 
 .sidebar .sidebar__logo {
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding-top: 5px;
 }
 
-.sidebar .sidebar__logo img {
-    height: 40px;
-}
-
-/* sidebar-nav */
-.sidebar-nav .menu-item {
-    position: relative;
-    padding: 0 20px;
+.sidebar .sidebar__logo .logo {
+    display: none;
 }
 
 .sidebar-nav .menu-item a {
     line-height: 35px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
 }
 
 .sidebar-nav .menu-item.active {
     color: white;
 }
 
-.sidebar-nav .menu-item.active::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 3px;
-    height: 35px;
-    background-color: #ADFF2F;
-}
-
 .sidebar-nav .menu-item img {
     width: 20px;
+    vertical-align: middle;
 }
 
-/* sidebar-playlist */
+.sidebar-nav .menu-item a span,
+.sidebar .user-area span {
+    display: none;
+}
+
 .sidebar .playlist {
-    flex-grow: 1;
+    display: none;
 }
 
-.sidebar .playlist__title {
-    padding-top: 8px;
-    margin-bottom: 12px;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: white;
-}
-
-.sidebar .playlist a {
-    line-height: 35px;
-}
-
-.sidebar .playlist button {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.sidebar .playlist button .icon-wrapper {
-    width: 37px;
-    height: 37px;
-    background-color: #D2D2D2;
-    color: black;
-}
-
-.sidebar .playlist button i {
-    line-height: 37px;
-    font-size: 20px;
-}
-
-/* user-area */
 .sidebar .user-area {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: auto;
 }
 
 .sidebar .user-area .download-wrapper {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
     padding-bottom: 10px;
-    border-bottom: 1px solid #D2D2D2;
     margin-bottom: 15px;
 }
 
 .sidebar .download-icon {
     width: 12px;
-}
-
-.sidebar .user-area .user-wrapper {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    font-size: 14px;
-    color: white;
 }
 
 .sidebar .avatar {
@@ -183,13 +120,108 @@ button {
 }
 
 
-
 @media (min-width: 576px) {
     .sidebar {
         flex-basis: 230px;
     }
-}
+    .sidebar > * {
+        padding: 0 20px;
+        text-align: left;
+    }
+    
+    .sidebar .sidebar__logo {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    .sidebar .sidebar__logo .logo {
+        display: inline-block;
+        height: 40px;
+    }
+    .sidebar .sidebar__logo .logo-small {
+        display: none;
+    }
 
+    /* sidebar-nav */
+    .sidebar-nav {
+        padding: 0;
+    }
+    .sidebar-nav .menu-item {
+        position: relative;
+        padding: 0 20px;
+    }
+    .sidebar-nav .menu-item a span {
+        display: inline-block;
+    }
+    .sidebar-nav .menu-item a {
+        line-height: 35px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .sidebar-nav .menu-item.active::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 3px;
+        height: 35px;
+        background-color: #ADFF2F;
+    }
+    
+    /* sidebar-playlist */
+    .sidebar .playlist {
+        display: block;
+        flex-grow: 1;
+    }
+    .sidebar .playlist__title {
+        padding-top: 8px;
+        margin-bottom: 12px;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+    }
+    .sidebar .playlist a {
+        line-height: 35px;
+    }
+    .sidebar .playlist button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .sidebar .playlist button .icon-wrapper {
+        width: 37px;
+        height: 37px;
+        background-color: #D2D2D2;
+        color: black;
+    }
+    .sidebar .playlist button i {
+        line-height: 37px;
+        font-size: 20px;
+    }
+    
+    /* user-area */
+    .sidebar .user-area span {
+        display: inline-block;
+    }
+    .sidebar .user-area .download-wrapper {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        border-bottom: 1px solid #D2D2D2;
+    }
+    .sidebar .user-area .user-wrapper {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 14px;
+        color: white;
+    }
+}
 
 
 
