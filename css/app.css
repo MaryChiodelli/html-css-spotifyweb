@@ -29,6 +29,12 @@ a {
     display: inline-block;
 }
 
+button {
+    border: none;
+    background-color: transparent;
+    color: currentColor;
+}
+
 .content-wrapper {
     flex-grow: 1;
     overflow: hidden;
@@ -118,6 +124,27 @@ a {
 
 .sidebar .playlist a {
     line-height: 35px;
+}
+
+.sidebar .playlist button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sidebar .playlist button .icon-wrapper {
+    width: 37px;
+    height: 37px;
+    background-color: #D2D2D2;
+    color: black;
+}
+
+.sidebar .playlist button i {
+    line-height: 37px;
+    font-size: 20px;
 }
 
 
