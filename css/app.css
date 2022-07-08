@@ -127,11 +127,12 @@ button {
     display: flex;
     flex-direction: row-reverse;
     position: fixed;
+    z-index: 1;
     top: 0;
     right: 0;
     left: 50px;
     padding: 1.5rem 1.25rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
 }
 
@@ -182,13 +183,22 @@ button {
     color: #D2D2D2;
 }
 
+/* LAYOUT */
 .row {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -10px;
 }
 
 .col {
     flex-basis: calc(100% / 2);
+    padding: 0 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section {
+    padding: 1.25rem 0;
 }
 
 /* recently-played */
@@ -198,9 +208,20 @@ button {
     color: white;
 }
 
-.recently-played .col {
-    padding: 20px;
-    border: 1px solid white;
+.col img {
+    margin-bottom: 1.25rem;
+}
+
+.col .col__title {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: white;
+}
+
+.col .col__description {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #D2D2D2;
 }
 
 @media (min-width: 576px) {
