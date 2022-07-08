@@ -159,7 +159,23 @@ button {
     gap: 1.25rem;
 }
 
+.category-list .list-item {
+    position: relative;
+}
+
+.category-list .list-item.active::after {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 15px);
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #ADFF2F;
+}
+
 .category-list .list-item a {
+    padding: 5px 0;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 12px;
