@@ -167,11 +167,15 @@ button {
     font-weight: 700;
 }
 
+.top-bar .button:hover {
+    transform: scale(1.125);
+}
+
 /* category */
 .category-wrapper {
     padding: 1.25rem 0;
     margin-top: 90px;
-    color: white;
+    color: #D2D2D2;
 }
 
 .category-list {
@@ -183,6 +187,10 @@ button {
 
 .category-list .list-item {
     position: relative;
+}
+
+.category-list .list-item:hover {
+    color: white;
 }
 
 .category-list .list-item.active::after {
@@ -201,7 +209,6 @@ button {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 12px;
-    color: #D2D2D2;
 }
 
 /* LAYOUT */
@@ -216,14 +223,41 @@ button {
     padding: 0 10px;
     margin-bottom: 20px;
     text-align: center;
+    cursor: pointer;
 }
 
 .section {
     padding: 1.25rem 0;
 }
 
-.col img {
+.col .image-wrapper {
+    position: relative;
     margin-bottom: 1.25rem;
+}
+
+.recently-played .image-wrapper:hover::before,
+.suggestions .image-wrapper:hover::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.recently-played .image-wrapper:hover::after,
+.suggestions .image-wrapper:hover::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '\f144';
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-size: 60px;
+    color: white;
 }
 
 .col .col__title {
