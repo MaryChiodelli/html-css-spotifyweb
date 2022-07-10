@@ -63,7 +63,6 @@ button {
 
 /* SIDEBAR */
 .sidebar > * {
-    border: 1px solid salmon;
     padding: 0 10px;
     text-align: center;
 }
@@ -84,7 +83,7 @@ button {
     color: white;
 }
 
-.sidebar-nav .menu-item img {
+.sidebar-nav .menu-item svg {
     width: 20px;
     vertical-align: middle;
 }
@@ -94,8 +93,21 @@ button {
     display: none;
 }
 
+.sidebar .sidebar-nav li:hover,
+.sidebar .playlist li:hover {
+    color: white;
+}
+
+.sidebar .sidebar-nav li:hover svg path {
+    fill: white;
+}
+
 .sidebar .playlist {
     display: none;
+}
+
+.sidebar .playlist a {
+    display: block;
 }
 
 .sidebar .user-area {
@@ -110,15 +122,24 @@ button {
 }
 
 .sidebar .download-icon {
-    width: 12px;
+    width: 20px;
 }
 
 .sidebar .avatar {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    object-fit: contain;
+    overflow: hidden;
     background-color: #D2D2D2;
+}
+
+.sidebar .user-area .download-wrapper:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.sidebar .user-area .download-wrapper:hover svg path {
+    fill: white;
 }
 
 /* MAIN-CONTENT */
@@ -339,6 +360,9 @@ button {
         margin-bottom: 10px;
         font-size: 14px;
         font-weight: 700;
+    }
+    .sidebar .playlist button:hover {
+        cursor: pointer;
     }
     .sidebar .playlist button .icon-wrapper {
         width: 37px;
